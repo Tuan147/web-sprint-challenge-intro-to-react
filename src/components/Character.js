@@ -4,21 +4,21 @@ import styled from "styled-components";
 
 
 const CharStyle = styled.div`
-
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 `
 
 
 const Character = props => {
-    const {data} = props;
-
 
     return (
         <CharStyle>
             <div className="container">
-                <h2>Name: {data.name}</h2>
-                <p>Height: {data.height}</p>
-                <p>Mass: {data.mass}</p>
-                <p>Gender: {data.gender}</p>
+                <h2>Name: {props.name}</h2>
+                <p>Height: {props.height}</p>
+                <p>Mass: {props.mass}</p>
+                <p>Gender: {props.gender}</p>
             </div>
         </CharStyle>
     )
