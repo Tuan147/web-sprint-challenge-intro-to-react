@@ -5,20 +5,22 @@ import styled from "styled-components";
 
 const CharStyle = styled.div`
     text-align: center;
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px dotted black;
+    color: white;
 `
 
-
 const Character = props => {
+
+    const {info} = props;
 
     return (
         <CharStyle>
             <div className="container">
-                <h2>Name: {props.name}</h2>
-                <p>Height: {props.height}</p>
-                <p>Mass: {props.mass}</p>
-                <p>Gender: {props.gender}</p>
+                <h2>Name: {info.name}</h2>
+                <p>Height: {info.height}</p>
+                <p>Mass: {info.mass}</p>
+                <p>Gender: {info.gender}</p>
             </div>
         </CharStyle>
     )

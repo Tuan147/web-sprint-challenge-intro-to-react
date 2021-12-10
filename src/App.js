@@ -19,6 +19,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
     .then(res => {
+      // console.log(res.data)
       setCharacter(res.data)
     })
     .catch(err => {
@@ -30,8 +31,8 @@ const App = () => {
     <div className="App">
       <h1 className="Header"> Star Wars Characters</h1>
         {
-        character.map(ch => {
-          return <Character  character={ch} key={ch.name} />
+        character.map((ch, index) => {
+          return <Character key={index} info={ch} />
         })}
     </div>
   );
